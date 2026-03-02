@@ -467,11 +467,16 @@ body{
     }
 
     .links ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding-left: 50px;
+        display: flex;
+        justify-content: center; 
+        gap: 15px; 
+        flex-wrap: wrap; 
+        padding: 0;
     }
+
+    .links ul li a {
+        font-size: 0.9rem; 
+}
 
     
     .contenedor-hero {
@@ -513,6 +518,7 @@ body{
 
 
     
+
 
 
 
