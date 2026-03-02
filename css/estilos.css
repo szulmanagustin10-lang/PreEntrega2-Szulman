@@ -459,44 +459,70 @@ body{
 
 
 
+/* --- 1. TABLET (Pantallas medianas hasta 1024px) --- */
 @media screen and (max-width: 1024px) {
     .container-header {
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start !important;
         padding: 20px;
-        gap: 15px;
     }
-    
+
     .links ul {
-        width: 100%;
-        justify-content: flex-start; 
-        gap: 20px; 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
         padding: 0;
-        margin: 0;
     }
 
     .contenedor-hero {
-        align-items: flex-start; 
-        text-align: left; 
-        padding: 0 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contenedor-hero {
-        flex-direction: column-reverse;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row; /* En tablet todavía pueden ir al lado */
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
     }
 
     .foto-inicio {
-        width: 100%; 
-        max-width: 350px;
-        margin: 0 0 20px 0; 
+        width: 300px;
+    }
+}
+
+/* --- 2. MOBILE (Pantallas chicas hasta 768px) --- */
+@media screen and (max-width: 768px) {
+    /* El menú se amontona menos con menos gap */
+    .links ul {
+        gap: 12px;
+    }
+
+    .links ul li a {
+        font-size: 14px;
+    }
+
+    /* El HERO pasa a ser vertical: Foto arriba, texto abajo */
+    .contenedor-hero {
+        flex-direction: column-reverse; 
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding: 15px;
+    }
+
+    .foto-inicio {
+        width: 100%;
+        max-width: 280px; /* Foto más chica para el celu */
+        margin-bottom: 20px;
     }
 
     .titulo-home {
-        font-size: 2rem;
-        text-align: left;
+        font-size: 1.8rem !important; /* Letra más chica para que no desborde */
+        line-height: 1.2;
+    }
+
+    .caja-introduccion {
+        width: 100% !important;
+        padding: 15px;
+        font-size: 15px;
     }
 }
 
@@ -504,6 +530,7 @@ body{
 
 
     
+
 
 
 
